@@ -1,0 +1,35 @@
+filebeat:
+  prospectors:
+    -
+      paths:
+        - "/var/log/ecs/dataheadsvc.log*"
+        - "/var/log/ecs/*/dataheadsvc.log*"
+      document_type: ecsdatahead
+      multiline:
+        pattern: "^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}"
+        negate: true
+        match: after
+
+    -
+      paths:
+        - "/var/log/ecs/*-perf-counter.log*"
+        - "/var/log/ecs/*/*-perf-counter.log*"
+      document_type: ecsperfcounter
+
+    -
+      paths:
+        - "/var/log/ecs/blobsvc.log*"
+        - "/var/log/ecs/*-error.log*"
+        - "/var/log/ecs/*/blobsvc.log*"
+        - "/var/log/ecs/*/*-error.log*"
+      document_type: ecsjavalog
+      multiline:
+        pattern: "^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}"
+        negate: true
+        match: after
+
+output.logstash:
+    enabled: true
+    #hosts: ["logstash:5044", "logstash2:5044"]
+    hosts: ["logstash:5044"]
+    index: filebeat

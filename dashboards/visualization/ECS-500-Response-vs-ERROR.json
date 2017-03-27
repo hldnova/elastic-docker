@@ -1,0 +1,10 @@
+  {
+      "title": "ECS 500 Response vs ERROR",
+      "visState": "{\"title\":\"ECS 500 Response vs ERROR\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(q='log_level:ERROR'), .es(q='tags:request_log AND status:500').yaxis(2)\",\"interval\":\"auto\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+  }

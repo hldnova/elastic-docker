@@ -1,0 +1,10 @@
+  {
+      "title": "ECS - Total Hits - log_level:ERROR OR status:500)",
+      "visState": "{\"title\":\"ECS - Total Hits - log_level:ERROR OR status:500)\",\"type\":\"metric\",\"params\":{\"fontSize\":60,\"handleNoResults\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"filebeat-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"(log_level:ERROR)  OR (tags:request_log AND status:500)\"}},\"filter\":[]}"
+      }
+  }
