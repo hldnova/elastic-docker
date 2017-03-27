@@ -12,13 +12,10 @@ Run the ELK (Elasticseach, Logstash, Kibana) stack with Docker and Docker-compos
 # Quick Start
 Start the ELK stack with *docker-compose*:
 ```bash
-$ cd ecs-dashboard/docker-elk
-$ docker-compose up
-```
-Or run in detached mode
-```bash
+$ cd elastic-docker
 $ docker-compose up -d
 ```
+
 Optionally, load metricbeat sample dashboards if you want some dashboard to start with. A metricbeat container is started to collect system data from the docker host. The container name should be *dockerelk_metricbeat_1* 
 
 ```bash
@@ -27,4 +24,4 @@ $ docker exec dockerelk_metricbeat_1 /metricbeat/scripts/import_dashboards -es h
 Access Kibana UI [http://<docker_box>:5601](http://<docker_box>:5601) with a web browser. Note that you will need to select an index pattern first, e.g., **metricbeat-***. Then click **Dashboard** and open an sample dashboard by clicking **Open** button on the top right area.
 
 # Configurations
-Configurations are under docker-elk in their respective directories.Adjust *docker-compose.yml" and other configurations files as needed.
+Configurations are in their respective directories. Adjust *docker-compose.yml" and other configurations files as needed.
