@@ -1,0 +1,10 @@
+    {
+      "title": "Reponse Time vs Requests",
+      "visState": "{\n  \"title\": \"Object-Insight-App-Behavior-Reponse-Time-vs-Number-of-Requests\",\n  \"type\": \"timelion\",\n  \"params\": {\n    \"expression\": \".es(q='type:accesslog', metric='avg:resp_time_ms'),.es(q='type:accesslog',metric='count:*').yaxis(2)\",\n    \"interval\": \"auto\"\n  },\n  \"aggs\": [],\n  \"listeners\": {}\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"query_string\": {\n      \"query\": \"*\",\n      \"analyze_wildcard\": true\n    }\n  },\n  \"filter\": []\n}"
+      }
+    }

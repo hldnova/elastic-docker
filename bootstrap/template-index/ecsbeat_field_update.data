@@ -1,0 +1,9 @@
+{
+    "title" : "ecsbeat-*",
+    "timeFieldName": "@timestamp",
+    "fieldFormatMap" : "{
+        \"egress\":{\"id\":\"bytes\"},
+        \"ingress\":{\"id\":\"bytes\"}
+    }"
+    
+}

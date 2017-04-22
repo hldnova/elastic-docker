@@ -1,0 +1,6 @@
+{
+    "title" : "navigation",
+    "fieldFormatMap" : "{
+        \"category\":{\"id\":\"url\",\"params\":{\"urlTemplate\":\"/service/elastic/kibana/app/kibana#/dashboard/{{value}}?_g=(time:(from:now-1d,mode:quick,to:now))\",\"labelTemplate\":\"{{ value}}\"}}
+    }"
+}

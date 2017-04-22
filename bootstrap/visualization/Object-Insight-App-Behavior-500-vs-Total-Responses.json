@@ -1,0 +1,10 @@
+    {
+      "title": "500 vs Total Responses",
+      "visState": "{\n  \"aggs\": [],\n  \"listeners\": {},\n  \"params\": {\n    \"expression\": \".es(q='status:500 AND type:accesslog',metric='count:*'),.es(q='type:accesslog',metric='count:*').yaxis(2)\",\n    \"interval\": \"auto\"\n  },\n  \"title\": \"Object-Insight-App-Behavior-500-vs-Total-Responses\",\n  \"type\": \"timelion\"\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"query_string\": {\n      \"analyze_wildcard\": true,\n      \"query\": \"*\"\n    }\n  },\n  \"filter\": []\n}"
+      }
+    }

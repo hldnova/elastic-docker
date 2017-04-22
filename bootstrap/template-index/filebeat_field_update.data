@@ -1,0 +1,10 @@
+{
+    "title" : "accesslog-*",
+    "timeFieldName": "@timestamp",
+    "fieldFormatMap" : "{
+        \"bytes_egress\":{\"id\":\"bytes\"},
+        \"bytes_ingress\":{\"id\":\"bytes\"},
+        \"upload\":{\"id\":\"bytes\"},
+        \"download\":{\"id\":\"bytes\"}
+    }"
+}

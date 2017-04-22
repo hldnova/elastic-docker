@@ -1,0 +1,10 @@
+    {
+      "title": "PUT Response Time vs Size",
+      "visState": "{\n  \"title\": \"Object-Insight-App-Behavior-PUT-Response-Time-vs-Size\",\n  \"type\": \"timelion\",\n  \"params\": {\n    \"expression\": \".es(q='verb:PUT AND type:accesslog',metric='avg:resp_time_ms'),.es(q='verb:PUT AND type:accesslog',metric='avg:bytes_ingress').yaxis(2)\",\n    \"interval\": \"auto\"\n  },\n  \"aggs\": [],\n  \"listeners\": {}\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"query_string\": {\n      \"analyze_wildcard\": true,\n      \"query\": \"*\"\n    }\n  },\n  \"filter\": []\n}"
+      }
+    }
