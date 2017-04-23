@@ -82,6 +82,30 @@
                     "type": "string",
                     "index" : "not_analyzed"
                 },
+                "file_name" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "log_level" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "response" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "bucket" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "namespace" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "clientip" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
                 "is_error" : {
                     "type": "integer"
                 },
