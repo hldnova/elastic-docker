@@ -1,0 +1,13 @@
+  {
+      "title": "Usage By Client",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[\n  {\n    \"col\": 1,\n    \"id\": \"Activity-Statistics-by-Domain\",\n    \"panelIndex\": 2,\n    \"row\": 1,\n    \"size_x\": 12,\n    \"size_y\": 3,\n    \"type\": \"visualization\"\n  },\n  {\n    \"id\": \"Activity-by-Application-Host\",\n    \"type\": \"visualization\",\n    \"panelIndex\": 3,\n    \"size_x\": 12,\n    \"size_y\": 3,\n    \"col\": 1,\n    \"row\": 4\n  }\n]",
+      "optionsJSON": "{\n  \"darkTheme\": false\n}",
+      "uiStateJSON": "{\n  \"P-1\": {\n    \"spy\": {\n      \"mode\": {\n        \"fill\": false,\n        \"name\": null\n      }\n    },\n    \"vis\": {\n      \"params\": {\n        \"sort\": {\n          \"columnIndex\": 3,\n          \"direction\": \"desc\"\n        }\n      }\n    }\n  },\n  \"P-2\": {\n    \"vis\": {\n      \"params\": {\n        \"sort\": {\n          \"columnIndex\": 3,\n          \"direction\": \"desc\"\n        }\n      }\n    }\n  },\n  \"P-3\": {\n    \"vis\": {\n      \"params\": {\n        \"sort\": {\n          \"columnIndex\": 1,\n          \"direction\": \"desc\"\n        }\n      }\n    }\n  },\n  \"P-4\": {\n    \"vis\": {\n      \"legendOpen\": false\n    }\n  }\n}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+  }
