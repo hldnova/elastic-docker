@@ -1,0 +1,10 @@
+  {
+      "title": "Resources Navigation",
+      "visState": "{\"title\":\"Resources Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [Workload by Node](#/dashboard/ECS-Workload-Node-Distribution)\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+  }
