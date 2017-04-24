@@ -16,6 +16,7 @@ DASHBOARD_BASE=${BOOT_LOCATION}/../
 VISUALIZATION_PATH=${DASHBOARD_BASE}/visualization
 SEARCH_PATH=${DASHBOARD_BASE}/search
 DASHBOARD_PATH=${DASHBOARD_BASE}/dashboard
+TEMPLATE_PATH=${BOOT_LOCATION}/../template-index
 NAVIGATION_INDEX=navigation
 ES_ENDPOINT=${ES_ENDPOINT:-http://elasticsearch:9200}
 
@@ -70,7 +71,7 @@ _enable_dynamic_mapping() {
 # create template for general navigation
 _create_navigation_template() {
     log "create template for navigation"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/navigation -d@./navigation_template.json
+    curl -XPUT -f ${ES_ENDPOINT}/_template/navigation -d@${TEMPLATE_PATH}/navigation_template.json
     if [ 0 -eq $? ]; then
        log "create template for navigation successfully"
     else
@@ -81,7 +82,7 @@ _create_navigation_template() {
 # create navigation category
 _create_navigation_category() {
     log "create navigation category"
-    curl -XPUT -f ${ES_ENDPOINT}/_bulk  --data-binary @./navigation_category.json
+    curl -XPUT -f ${ES_ENDPOINT}/_bulk  --data-binary @${TEMPLATE_PATH}/navigation_category.json
     if [ 0 -eq $? ]; then
        log "created navigation category successfully"
     else
@@ -92,7 +93,7 @@ _create_navigation_category() {
 # create template for accesslog 
 _create_accesslog_template() {
     log "create template for accesslog"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/accesslog -d@./accesslog_template.json
+    curl -XPUT -f ${ES_ENDPOINT}/_template/accesslog -d@${TEMPLATE_PATH}/accesslog_template.json
     if [ 0 -eq $? ]; then
        log "create template for accesslog successfully"
     else
@@ -103,7 +104,7 @@ _create_accesslog_template() {
 # create template for metricbeat
 _create_metricbeat_template() {
     log "create template for metricbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/metricbeat -d@./metricbeat_template.json
+    curl -XPUT -f ${ES_ENDPOINT}/_template/metricbeat -d@${TEMPLATE_PATH}/metricbeat_template.json
     if [ 0 -eq $? ]; then
        log "create template for metricbeat successfully"
     else
@@ -114,7 +115,7 @@ _create_metricbeat_template() {
 # create template for ecsbeat
 _create_ecsbeat_template() {
     log "create template for ecsbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/ecsbeat -d@./ecsbeat_template.json
+    curl -XPUT -f ${ES_ENDPOINT}/_template/ecsbeat -d@${TEMPLATE_PATH}/ecsbeat_template.json
     if [ 0 -eq $? ]; then
        log "create template for ecsbeat successfully"
     else
@@ -124,7 +125,7 @@ _create_ecsbeat_template() {
 
 _create_accesslog_kibana_index() {
     log "create index for accesslog"
-    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/filebeat-* -d@./filebeat_field_update.data
+    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/filebeat-* -d@${TEMPLATE_PATH}/filebeat_field_update.data
     if [ 0 -eq $? ]; then
        log "create kibana index for filebeat successfully"
     else
@@ -134,7 +135,7 @@ _create_accesslog_kibana_index() {
 
 _create_metricbeat_kibana_index() {
     log "create index for metricbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/metricbeat-* -d@./metricbeat_field_update.data
+    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/metricbeat-* -d@${TEMPLATE_PATH}/metricbeat_field_update.data
     if [ 0 -eq $? ]; then
        log "create kibana index for metricbeat successfully"
     else
@@ -144,7 +145,7 @@ _create_metricbeat_kibana_index() {
 
 _create_ecsbeat_kibana_index() {
     log "create index for ecsbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/ecsbeat-* -d@./ecsbeat_field_update.data
+    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/ecsbeat-* -d@${TEMPLATE_PATH}/ecsbeat_field_update.data
     if [ 0 -eq $? ]; then
        log "create kibana index for ecsbeat successfully"
     else
@@ -154,7 +155,7 @@ _create_ecsbeat_kibana_index() {
 
 _create_navigation_kibana_index() {
     log "create index for navigation"
-    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/navigation -d@./navigation_field_update.data
+    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/navigation -d@${TEMPLATE_PATH}/navigation_field_update.data
     if [ 0 -eq $? ]; then
        log "create kibana index for navigation successfully"
     else
