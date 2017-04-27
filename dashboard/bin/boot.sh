@@ -44,6 +44,8 @@ _create_metricbeat_template
 
 _create_ecsbeat_template
 
+_create_ecsbeat_template_extra
+
 log "Create indexes"
 
 _create_accesslog_kibana_index
@@ -62,7 +64,7 @@ _import_kibana_search
 
 _import_kibana_dashboard
 
-log "Create ecsbeat Kibana field format map"
+#log "Create ecsbeat Kibana field format map"
 
-_create_ecsbeat_field_format_map
+#_create_ecsbeat_field_format_map
 

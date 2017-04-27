@@ -123,6 +123,16 @@ _create_ecsbeat_template() {
     fi
 }
 
+_create_ecsbeat_template_extra() {
+    log "create extra template for ecsbeat"
+    curl -XPUT -f ${ES_ENDPOINT}/_template/ecsbeat-extra -d@${TEMPLATE_PATH}/ecsbeat_template_extra.json
+    if [ 0 -eq $? ]; then
+       log "create extra template for ecsbeat successfully"
+    else
+       log "failed to create extra template for ecsbeat"
+    fi
+}
+
 _create_accesslog_kibana_index() {
     log "create index for accesslog"
     curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/filebeat-* -d@${TEMPLATE_PATH}/filebeat_field_update.data
@@ -205,16 +215,16 @@ _import_kibana_dashboard() {
     log "import kibana dashboard successfully"
 }
 
-_create_ecsbeat_field_format_map() {
-   curl -XPOST -f ${ES_ENDPOINT}/.kibana/index-pattern/ecsbeat-*/_update -d '
-   {
-     "doc": {
-        "fieldFormatMap" : "{\"diskSpaceOfflineTotalCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceAllocatedCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceFreeCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceTotalCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}}}"
-     }
-   }'
-   if [ 0 -eq $? ]; then
-     log "create ecsbeat field format map successfully"
-   else
-     log "failed to create ecsbeat field format map"
-   fi 
-}
+#_create_ecsbeat_field_format_map() {
+#   curl -XPOST -f ${ES_ENDPOINT}/.kibana/index-pattern/ecsbeat-*/_update -d '
+#   {
+#     "doc": {
+#        "fieldFormatMap" : "{\"diskSpaceOfflineTotalCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceAllocatedCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceFreeCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceTotalCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}}}"
+#     }
+#   }'
+#   if [ 0 -eq $? ]; then
+#     log "create ecsbeat field format map successfully"
+#   else
+#     log "failed to create ecsbeat field format map"
+#   fi 
+#}

@@ -1,0 +1,127 @@
+{
+    "template" : "ecsbeat-*",
+    "mappings": {
+        "ecsbeat": {
+            "properties": {
+                "ecs-customer": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "ecs-node-ip": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+               "ecs-node-name": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "ecs-vdc-id": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "ecs-vdc-name": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "ecs-storagepool-name": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "ecs-storagepool-id": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "namespace" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "resourceId" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "transactionErrorsCurrent_types_errorType" : {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "ecs-event-type": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "dt-error": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "id": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "dt-status": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "eventType": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "processName": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "dt-owner-ip": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "transactionErrorsCurrent_types_category": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "severity": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "dt-type": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "dt-id": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "dt-type-level": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "dt-created": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "healthStatus": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "userId": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                },
+                "is_error" : {
+                    "type": "integer"
+                },
+                "is_success" : {
+                    "type": "integer"
+                },
+                "is_user_error" : {
+                    "type": "integer"
+                },
+                "is_system_error" : {
+                    "type": "integer"
+                },
+                "is_user_error_bool" : {
+                    "type": "integer"
+                },
+                "is_system_error_bool" : {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

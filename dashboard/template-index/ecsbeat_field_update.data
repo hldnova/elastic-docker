@@ -3,7 +3,10 @@
     "timeFieldName": "@timestamp",
     "fieldFormatMap" : "{
         \"egress\":{\"id\":\"bytes\"},
-        \"ingress\":{\"id\":\"bytes\"}
+        \"ingress\":{\"id\":\"bytes\"},
+        \"diskSpaceOfflineTotalCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},
+        \"diskSpaceAllocatedCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},
+        \"diskSpaceFreeCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},
+        \"diskSpaceTotalCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}}
     }"
-    
 }
