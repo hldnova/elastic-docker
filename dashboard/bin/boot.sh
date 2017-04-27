@@ -20,7 +20,7 @@ type which || {
   type which
 }
 
-set -x
+set -uex
 
 log "Verify environment"
 
@@ -63,6 +63,8 @@ _import_kibana_visualization
 _import_kibana_search
 
 _import_kibana_dashboard
+
+_set_kibana_default_index
 
 #log "Create ecsbeat Kibana field format map"
 

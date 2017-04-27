@@ -51,7 +51,7 @@ _validate_environment() {
 }
 
 _enable_dynamic_mapping() {
-    curl -XPUT -f ${ES_ENDPOINT}/_template/enable_dynamic_mappings -d '
+    curl -XPUT ${ES_ENDPOINT}/_template/enable_dynamic_mappings -d '
     {
       "order": 0,
       "template": "*",
@@ -71,7 +71,7 @@ _enable_dynamic_mapping() {
 # create template for general navigation
 _create_navigation_template() {
     log "create template for navigation"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/navigation -d@${TEMPLATE_PATH}/navigation_template.json
+    curl -XPUT ${ES_ENDPOINT}/_template/navigation -d@${TEMPLATE_PATH}/navigation_template.json
     if [ 0 -eq $? ]; then
        log "create template for navigation successfully"
     else
@@ -82,7 +82,7 @@ _create_navigation_template() {
 # create navigation category
 _create_navigation_category() {
     log "create navigation category"
-    curl -XPUT -f ${ES_ENDPOINT}/_bulk  --data-binary @${TEMPLATE_PATH}/navigation_category.json
+    curl -XPUT ${ES_ENDPOINT}/_bulk  --data-binary @${TEMPLATE_PATH}/navigation_category.json
     if [ 0 -eq $? ]; then
        log "created navigation category successfully"
     else
@@ -93,7 +93,7 @@ _create_navigation_category() {
 # create template for accesslog 
 _create_accesslog_template() {
     log "create template for accesslog"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/accesslog -d@${TEMPLATE_PATH}/accesslog_template.json
+    curl -XPUT ${ES_ENDPOINT}/_template/accesslog -d@${TEMPLATE_PATH}/accesslog_template.json
     if [ 0 -eq $? ]; then
        log "create template for accesslog successfully"
     else
@@ -104,7 +104,7 @@ _create_accesslog_template() {
 # create template for metricbeat
 _create_metricbeat_template() {
     log "create template for metricbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/metricbeat -d@${TEMPLATE_PATH}/metricbeat_template.json
+    curl -XPUT ${ES_ENDPOINT}/_template/metricbeat -d@${TEMPLATE_PATH}/metricbeat_template.json
     if [ 0 -eq $? ]; then
        log "create template for metricbeat successfully"
     else
@@ -115,7 +115,7 @@ _create_metricbeat_template() {
 # create template for ecsbeat
 _create_ecsbeat_template() {
     log "create template for ecsbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/ecsbeat -d@${TEMPLATE_PATH}/ecsbeat_template.json
+    curl -XPUT ${ES_ENDPOINT}/_template/ecsbeat -d@${TEMPLATE_PATH}/ecsbeat_template.json
     if [ 0 -eq $? ]; then
        log "create template for ecsbeat successfully"
     else
@@ -125,7 +125,7 @@ _create_ecsbeat_template() {
 
 _create_ecsbeat_template_extra() {
     log "create extra template for ecsbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/_template/ecsbeat-extra -d@${TEMPLATE_PATH}/ecsbeat_template_extra.json
+    curl -XPUT ${ES_ENDPOINT}/_template/ecsbeat-extra -d@${TEMPLATE_PATH}/ecsbeat_template_extra.json
     if [ 0 -eq $? ]; then
        log "create extra template for ecsbeat successfully"
     else
@@ -135,7 +135,7 @@ _create_ecsbeat_template_extra() {
 
 _create_accesslog_kibana_index() {
     log "create index for accesslog"
-    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/filebeat-* -d@${TEMPLATE_PATH}/filebeat_field_update.data
+    curl -XPUT ${ES_ENDPOINT}/.kibana/index-pattern/filebeat-* -d@${TEMPLATE_PATH}/filebeat_field_update.data
     if [ 0 -eq $? ]; then
        log "create kibana index for filebeat successfully"
     else
@@ -145,7 +145,7 @@ _create_accesslog_kibana_index() {
 
 _create_metricbeat_kibana_index() {
     log "create index for metricbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/metricbeat-* -d@${TEMPLATE_PATH}/metricbeat_field_update.data
+    curl -XPUT ${ES_ENDPOINT}/.kibana/index-pattern/metricbeat-* -d@${TEMPLATE_PATH}/metricbeat_field_update.data
     if [ 0 -eq $? ]; then
        log "create kibana index for metricbeat successfully"
     else
@@ -155,7 +155,7 @@ _create_metricbeat_kibana_index() {
 
 _create_ecsbeat_kibana_index() {
     log "create index for ecsbeat"
-    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/ecsbeat-* -d@${TEMPLATE_PATH}/ecsbeat_field_update.data
+    curl -XPUT ${ES_ENDPOINT}/.kibana/index-pattern/ecsbeat-* -d@${TEMPLATE_PATH}/ecsbeat_field_update.data
     if [ 0 -eq $? ]; then
        log "create kibana index for ecsbeat successfully"
     else
@@ -165,11 +165,23 @@ _create_ecsbeat_kibana_index() {
 
 _create_navigation_kibana_index() {
     log "create index for navigation"
-    curl -XPUT -f ${ES_ENDPOINT}/.kibana/index-pattern/navigation -d@${TEMPLATE_PATH}/navigation_field_update.data
+    curl -XPUT ${ES_ENDPOINT}/.kibana/index-pattern/navigation -d@${TEMPLATE_PATH}/navigation_field_update.data
     if [ 0 -eq $? ]; then
        log "create kibana index for navigation successfully"
     else
        log "failed to create kibana index for navigation"
+    fi
+}
+
+_set_kibana_default_index() {
+    log "set kibana default index"
+curl -XPUT http://localhost:9200/.kibana/config/4.6.3 -d '{"defaultIndex" : "komodo-general-entries-navigation"}'
+
+    curl -XPUT ${ES_ENDPOINT}/.kibana/config/5.1.2 -d '{"defaultIndex" : "ecsbeat-*"}'
+    if [ 0 -eq $? ]; then
+       log "set kibana default index successfully"
+    else
+       log "failed to kibana default index for navigation"
     fi
 }
 
@@ -178,7 +190,7 @@ _import_kibana_visualization() {
     cd ${VISUALIZATION_PATH}
     for i in `ls -1`; do 
         local fname=`basename $i .json`
-        curl -XPUT -f ${ES_ENDPOINT}/.kibana/visualization/${fname} -d@$i
+        curl -XPUT ${ES_ENDPOINT}/.kibana/visualization/${fname} -d@$i
         if [ 0 -ne $? ]; then
           log "failed to import kibana visualization"
           return
@@ -192,7 +204,7 @@ _import_kibana_search() {
     cd ${SEARCH_PATH}
     for i in `ls -1`; do 
         local fname=`basename $i .json`
-        curl -XPUT -f ${ES_ENDPOINT}/.kibana/search/${fname} -d@$i
+        curl -XPUT ${ES_ENDPOINT}/.kibana/search/${fname} -d@$i
         if [ 0 -ne $? ]; then
           log "failed to import kibana search"
           return
@@ -206,7 +218,7 @@ _import_kibana_dashboard() {
     cd ${DASHBOARD_PATH}
     for i in `ls -1`; do 
         local fname=`basename $i .json`
-        curl -XPUT -f ${ES_ENDPOINT}/.kibana/dashboard/${fname} -d@$i
+        curl -XPUT ${ES_ENDPOINT}/.kibana/dashboard/${fname} -d@$i
         if [ 0 -ne $? ]; then
           log "failed to import kibana dashboard"
           return
@@ -216,7 +228,7 @@ _import_kibana_dashboard() {
 }
 
 #_create_ecsbeat_field_format_map() {
-#   curl -XPOST -f ${ES_ENDPOINT}/.kibana/index-pattern/ecsbeat-*/_update -d '
+#   curl -XPOST ${ES_ENDPOINT}/.kibana/index-pattern/ecsbeat-*/_update -d '
 #   {
 #     "doc": {
 #        "fieldFormatMap" : "{\"diskSpaceOfflineTotalCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceAllocatedCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceFreeCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}},\"diskSpaceTotalCurrent_Space\":{\"id\":\"bytes\",\"params\":{\"pattern\":\"0,0b\"}}}"
