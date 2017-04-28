@@ -2,12 +2,12 @@
       "title": "Request By Node",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"id\":\"ECS-Request-By-Node-Over-Time\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":9,\"size_y\":4,\"col\":1,\"row\":5},{\"id\":\"ECS-Request-Distribution-by-Node\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":9,\"size_y\":4,\"col\":1,\"row\":1}]",
+      "panelsJSON": "[{\"col\":2,\"id\":\"ECS-Request-By-Node-Over-Time\",\"panelIndex\":1,\"row\":5,\"size_x\":9,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ECS-Request-Distribution-by-Node\",\"panelIndex\":2,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"ECS-Request-By-Method-and-Node\",\"panelIndex\":3,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"}]",
       "optionsJSON": "{\"darkTheme\":false}",
       "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"desc\"}}}}}",
       "version": 1,
       "timeRestore": false,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }
   }
