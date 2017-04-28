@@ -18,7 +18,7 @@ SEARCH_PATH=${DASHBOARD_BASE}/search
 DASHBOARD_PATH=${DASHBOARD_BASE}/dashboard
 TEMPLATE_PATH=${BOOT_LOCATION}/../template-index
 NAVIGATION_INDEX=navigation
-ES_ENDPOINT=${ES_ENDPOINT:-http://elasticsearch:9200}
+ES_ENDPOINT=${ES_ENDPOINT:-http://localhost:9200}
 
 log(){
     msg=" $*"
