@@ -1,0 +1,10 @@
+  {
+      "title": "User Data vs System Metadata",
+      "visState": "{\"title\":\"User Data vs System Metadata\",\"type\":\"area\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"smoothLines\":false,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"chunksL0BtreeTotalSize\",\"customLabel\":\"L0 Btree Total Size\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"chunksL0JournalTotalSize\",\"customLabel\":\"L0 Journal Total Size\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"chunksL1BtreeTotalSize\",\"customLabel\":\"L1 Btree Total Size\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"chunksL1JournalTotalSize\",\"customLabel\":\"L2 Journal Total Size\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"chunksRepoTotalSealSize\",\"customLabel\":\"User Total Seal Size\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"User Total Seal Size\":\"#7EB26D\",\"L0 Btree Total Size\":\"#EAB839\",\"L0 Journal Total Size\":\"#EAB839\",\"L1 Btree Total Size\":\"#EAB839\",\"L2 Journal Total Size\":\"#EAB839\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ecsbeat-*\",\"query\":{\"query_string\":{\"query\":\"ecs-event-type:storagepools\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+  }
