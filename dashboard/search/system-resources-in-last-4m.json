@@ -1,0 +1,16 @@
+  {
+      "title": "system-resources-in-last-4m",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"metricbeat-*\",\"query\":{\"query_string\":{\"query\":\"metricset.module:system AND (metricset.name:cpu OR metricset.name:memory OR metricset.name:network OR metricset.name:process OR system.filesystem.mount_point:\\\"/data\\\")\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"metricbeat-*\",\"key\":\"query\",\"value\":\"{\\\"range\\\":{\\\"@timestamp\\\":{\\\"gte\\\":\\\"now-4m/m\\\"}}}\",\"disabled\":false,\"alias\":null},\"query\":{\"range\":{\"@timestamp\":{\"gte\":\"now-4m/m\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+  }

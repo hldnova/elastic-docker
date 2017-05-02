@@ -1,0 +1,16 @@
+  {
+      "title": "ecs-event-type-storagepools",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ecsbeat-*\",\"query\":{\"query_string\":{\"query\":\"ecs-event-type:storagepools\",\"analyze_wildcard\":true}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"diskSpaceAllocatedCurrent_Space\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ecsbeat-*\",\"key\":\"exists\",\"negate\":false,\"value\":\"diskSpaceAllocatedCurrent_Space\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+  }

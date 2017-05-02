@@ -1,8 +1,8 @@
   {
-      "title": "Request By Node",
+      "title": "Access By Node",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":2,\"id\":\"ECS-Request-By-Node-Over-Time\",\"panelIndex\":1,\"row\":5,\"size_x\":9,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ECS-Request-Distribution-by-Node\",\"panelIndex\":2,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"ECS-Request-By-Method-and-Node\",\"panelIndex\":3,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"}]",
+      "panelsJSON": "[{\"col\":1,\"id\":\"ECS-Request-By-Node-Over-Time\",\"panelIndex\":1,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":4,\"id\":\"ECS-Request-Distribution-by-Node\",\"panelIndex\":2,\"row\":1,\"size_x\":9,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"ECS-Request-By-Method-and-Node\",\"panelIndex\":3,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"id\":\"Node-Navigation\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":3,\"size_y\":4,\"col\":1,\"row\":1}]",
       "optionsJSON": "{\"darkTheme\":false}",
       "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"desc\"}}}}}",
       "version": 1,
