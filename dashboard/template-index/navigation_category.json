@@ -1,6 +1,8 @@
 {"index":{"_index":"navigation","_type":"category"}}
-{"category": "Alerts-Insights-ActiveAlerts-Dashboard"}
+{"category": "Alerts"}
 {"index":{"_index":"navigation","_type":"category"}}
-{"category": "Capacity-Insights-VDC-Insight-Dashboard"}
+{"category": "Capacity"}
 {"index":{"_index":"navigation","_type":"category"}}
-{"category": "ECS-Access-Dashboard"}
+{"category": "Access"}
+{"index":{"_index":"navigation","_type":"category"}}
+{"category": "Audit"}

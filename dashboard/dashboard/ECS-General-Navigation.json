@@ -2,12 +2,14 @@
       "title": "General Navigation",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"id\":\"ECS-Access-Navigation\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":2,\"size_y\":2,\"col\":1,\"row\":1},{\"id\":\"ECS-Resources-Navigation\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":2,\"size_y\":1,\"col\":1,\"row\":5},{\"id\":\"ECS-Troubleshooting-Navigation\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":2,\"size_y\":2,\"col\":1,\"row\":3}]",
+      "panelsJSON": "[{\"col\":1,\"id\":\"Navigation-By-Category\",\"panelIndex\":1,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"id\":\"Active-Alert-Distribution\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":3,\"size_y\":3,\"col\":4,\"row\":1},{\"id\":\"Object-Insight-App-Behavior-Total-500-Responses\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":3,\"size_y\":3,\"col\":7,\"row\":1},{\"id\":\"VDC-Disk-Capacity\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":7,\"size_y\":4,\"col\":1,\"row\":4},{\"id\":\"Activity-by-Bucket\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":5,\"size_y\":4,\"col\":8,\"row\":4},{\"id\":\"User-Data-vs-System-Metadata\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":3,\"size_y\":3,\"col\":10,\"row\":1}]",
       "optionsJSON": "{\"darkTheme\":false}",
-      "uiStateJSON": "{}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-4\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-5\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
       "version": 1,
-      "timeRestore": false,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-24h",
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }
   }

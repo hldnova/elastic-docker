@@ -1,0 +1,20 @@
+  {
+      "title": "ecs-event-type-latestalert",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "acknowledged",
+        "description",
+        "ecs-vdc-name",
+        "namespace",
+        "severity"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ecsbeat-*\",\"query\":{\"query_string\":{\"query\":\"ecs-event-type:latestalert AND (severity:CRITICAL OR severity:ERROR)\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"ecsbeat-*\",\"key\":\"query\",\"value\":\"{\\\"range\\\":{\\\"@timestamp\\\":{\\\"gte\\\":\\\"now-2m/m\\\"}}}\",\"disabled\":false,\"alias\":null},\"$state\":{\"store\":\"appState\"},\"query\":{\"range\":{\"@timestamp\":{\"gte\":\"now-2m/m\"}}}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+  }
