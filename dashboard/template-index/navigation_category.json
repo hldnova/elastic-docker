@@ -6,3 +6,7 @@
 {"category": "Access"}
 {"index":{"_index":"navigation","_type":"category"}}
 {"category": "Audit"}
+{"index":{"_index":"navigation","_type":"category"}}
+{"category": "Resources"}
+{"index":{"_index":"navigation","_type":"category"}}
+{"category": "Troubleshoot"}

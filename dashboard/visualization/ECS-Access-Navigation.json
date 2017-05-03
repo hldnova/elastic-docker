@@ -1,6 +1,6 @@
   {
       "title": "Access Navigation",
-      "visState": "{\"title\":\"Access Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [Access](#/dashboard/ECS-Access-Dashboard)\\n\\n- [Usage by Client](#/dashboard/ECS-Usage-By-Client-Host)\\n\\n- [Usage by Namespace](#/dashboard/ECS-Usage-Summary-by-Namespace)\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Access Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [Access](#/dashboard/ECS-Access-Dashboard)\\n\\n- [Usage by Client](#/dashboard/ECS-Usage-By-Client-Host)\\n\\n- [Usage by Namespace](#/dashboard/ECS-Usage-By-Namespace)\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,

@@ -1,0 +1,14 @@
+  {
+      "title": "Usage by Namespace",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":4,\"id\":\"ECS-Namespace-Usage-Summary\",\"panelIndex\":1,\"row\":1,\"size_x\":9,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ECS-Traffic-Overtime\",\"panelIndex\":2,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Top-5-In-Size-By-Namespace\",\"panelIndex\":3,\"row\":8,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"id\":\"ECS-Object-Operations-Overtime\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":6,\"size_y\":3,\"col\":7,\"row\":5},{\"id\":\"ECS-Access-Navigation\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":3,\"size_y\":3,\"col\":1,\"row\":1}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"desc\"}}}},\"P-2\":{\"vis\":{\"legendOpen\":true}},\"P-4\":{\"vis\":{\"legendOpen\":true}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"ecs-event-type:nsbillingsample\"}}}]}"
+      }
+  }
+
