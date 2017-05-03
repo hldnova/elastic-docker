@@ -1,0 +1,10 @@
+  {
+      "title": "Troubleshoot Navigation",
+      "visState": "{\"title\":\"Troubleshoot Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [500 Response](#/dashboard/ECS-Troubleshoot-Dashboard)\\n\\n- [Client Error](#/dashboard/ECS-Client-Error-Distribution)\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+  }

@@ -1,6 +1,6 @@
   {
       "title": "ECS - Total Hits - log_level:ERROR OR status:500)",
-      "visState": "{\"title\":\"ECS - Total Hits - log_level:ERROR OR status:500)\",\"type\":\"metric\",\"params\":{\"fontSize\":60,\"handleNoResults\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "visState": "{\"title\":\"ECS - Total Hits - log_level:ERROR OR status:500)\",\"type\":\"metric\",\"params\":{\"fontSize\":30,\"handleNoResults\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
