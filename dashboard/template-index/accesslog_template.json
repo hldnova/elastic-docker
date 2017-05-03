@@ -134,6 +134,14 @@
                     "type": "float"
                 }
             }
+        },
+        "restart": {
+            "properties": {
+                "ecs-service": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                }
+            }
         }
     }
 }

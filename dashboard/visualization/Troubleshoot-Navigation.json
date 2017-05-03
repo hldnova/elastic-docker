@@ -1,6 +1,6 @@
   {
       "title": "Troubleshoot Navigation",
-      "visState": "{\"title\":\"Troubleshoot Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [500 Response](#/dashboard/ECS-Troubleshoot-Dashboard)\\n\\n- [Client Error](#/dashboard/ECS-Client-Error-Distribution)\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Troubleshoot Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [500 Response](#/dashboard/ECS-Troubleshoot-Dashboard)\\n\\n- [Client Error](#/dashboard/ECS-Client-Error-Distribution)\\n\\n- [Service Restart](#/dashboard/Service-Restart-Dashboard)\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
