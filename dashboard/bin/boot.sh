@@ -4,7 +4,7 @@
 # Use this script to install/configure any bits on the container
 ########################################################################
 
-BOOT_LOCATION=${BOOT_LOCATION:-'/boot'}
+BOOT_LOCATION=${BOOT_LOCATION:-'.'}
 
 source ${BOOT_LOCATION}/boot_lib.sh
 
