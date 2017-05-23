@@ -1,9 +1,10 @@
-version: '2'
+#version: '2'
 
-services:
+#services:
   elasticsearch:
     image: elasticsearch:5.1.2
     #build: elasticsearch/
+    net: host
     ports:
       - 9200:9200
     # uncomment to map elastic db to volume with large disk space
@@ -11,42 +12,44 @@ services:
       - /data/volume0/elasticsearch/:/usr/share/elasticsearch/data/
     environment:
       ES_JAVA_OPTS: "-Xms1g -Xmx1g "
-    networks:
-      - docker_elk
+#    networks:
+#      - docker_elk
 
   logstash:
     image: logstash:5.1.2
     #build: logstash/
+    net: host
     command: -f /etc/logstash/conf.d/
     ports:
       - 5044:5044
     volumes:
       - ./logstash/config:/etc/logstash/conf.d
       - ./logstash/logs/:/var/log/logstash/
-    networks:
-      - docker_elk
+#    networks:
+#      - docker_elk
 
   kibana:
     image: kibana:5.1.2
     #build: kibana/
+    net: host
     volumes:
       - ./kibana/config/kibana.yml:/etc/kibana/kibana.yml
     ports:
       - "5601:5601"
-    networks:
-      - docker_elk
+#    networks:
+#      - docker_elk
 
-  #filebeat:
-  #  # uncomment the line below to disable this container
-  #  #entrypoint: /bin/true
-  #  image: emccorp/docker-filebeat:5.2.0
-  #  #image: prima/filebeat:5.1.2
-  #  #hostname: lglca061.lss.emc.com
-  #  volumes:
-  #    - ./filebeat/config/filebeat.yml:/filebeat/filebeat.yml
-  #    - ./filebeat/logs:/var/log/ecs/
-  #  networks:
-  #    - docker_elk
+  filebeat:
+    # uncomment the line below to disable this container
+    #entrypoint: /bin/true
+    image: emccorp/docker-filebeat:5.2.0
+    #image: prima/filebeat:5.1.2
+    #hostname: lglca061.lss.emc.com
+    volumes:
+      - ./filebeat/config/filebeat.yml:/filebeat/filebeat.yml
+      - ./filebeat/logs:/var/log/ecs/
+#    networks:
+#      - docker_elk
 
   #metricbeat:
   #  # uncomment the line below to disable this container
@@ -60,6 +63,6 @@ services:
   #  networks:
   #    - docker_elk
 
-networks:
-  docker_elk:
-    driver: bridge
+#networks:
+#  docker_elk:
+#    driver: bridge
