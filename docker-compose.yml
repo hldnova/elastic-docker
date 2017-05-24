@@ -36,6 +36,22 @@ services:
     networks:
       - docker_elk
 
+  elastalert:
+    image: emccorp/docker-elastalert:0.1.12
+    #build: elastalert/
+    environment:
+       EMAIL_ADDRESS: "${EMAIL_ADDRESS}"
+       SLACK_WEBHOOK_URL: "${SLACK_WEBHOOK_URL}"
+       SNMP_TRAP_DESTINATION: "${SNMP_TRAP_DESTINATION}"
+       SNMP_COMMUNITY: "${SNMP_COMMUNITY}"
+    # export HOSTNAME from your shell for this to take effect
+    hostname: "${HOSTNAME}"
+    volumes:
+      - ./elastalert/config/:/opt/elastalert/config/
+      - ./elastalert/rules/:/opt/elastalert/rules/
+    networks:
+      - docker_elk
+
   #filebeat:
   #  # uncomment the line below to disable this container
   #  #entrypoint: /bin/true
