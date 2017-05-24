@@ -4,7 +4,7 @@ filebeat:
       paths:
         - "/var/log/ecs/dataheadsvc.log*"
         - "/var/log/ecs/*/dataheadsvc.log*"
-      document_type: ecsdatahead
+      document_type: dataheadsvc
       multiline:
         pattern: "^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}"
         negate: true
