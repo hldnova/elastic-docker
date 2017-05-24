@@ -175,7 +175,7 @@ _create_navigation_kibana_index() {
 
 _set_kibana_default_index() {
     log "set kibana default index"
-    curl -XPUT ${ES_ENDPOINT}/.kibana/config/5.1.2 -d '{"defaultIndex" : "ecsbeat-*"}'
+    curl -XPUT ${ES_ENDPOINT}/.kibana/config/5.1.2 -d '{"defaultIndex" : "navigation"}'
     if [ 0 -eq $? ]; then
        log "set kibana default index successfully"
     else

@@ -1,14 +1,19 @@
   {
-      "title": "Client vs Error Distribution",
+      "title": "Errors by Client",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":3,\"id\":\"Client-vs-Error\",\"panelIndex\":1,\"row\":1,\"size_x\":3,\"size_y\":4,\"type\":\"visualization\"},{\"col\":6,\"id\":\"Client-vs-Error-Data-Table\",\"panelIndex\":2,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Error-Overtime\",\"panelIndex\":3,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Client-vs-Error-Overtime\",\"panelIndex\":4,\"row\":5,\"size_x\":5,\"size_y\":4,\"type\":\"visualization\"},{\"id\":\"Troubleshoot-Navigation\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":2,\"size_y\":1,\"col\":1,\"row\":1},{\"id\":\"Navigation-By-Category\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":2,\"size_y\":3,\"col\":1,\"row\":2}]",
+      "panelsJSON": "[{\"col\":3,\"id\":\"Client-vs-Error\",\"panelIndex\":1,\"row\":1,\"size_x\":3,\"size_y\":4,\"type\":\"visualization\"},{\"col\":6,\"id\":\"Client-vs-Error-Data-Table\",\"panelIndex\":2,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Error-Overtime\",\"panelIndex\":3,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Client-vs-Error-Overtime\",\"panelIndex\":4,\"row\":5,\"size_x\":5,\"size_y\":4,\"type\":\"visualization\"},{\"id\":\"Troubleshoot-Navigation\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":2,\"size_y\":4,\"col\":1,\"row\":1}]",
       "optionsJSON": "{\"darkTheme\":false}",
-      "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}},\"P-6\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+      "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}}}",
       "version": 1,
       "timeRestore": true,
       "timeTo": "now",
       "timeFrom": "now-24h",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }

@@ -2,7 +2,7 @@
       "title": "Service Restart Dashboard",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":7,\"id\":\"Service-Restart-Over-Time\",\"panelIndex\":2,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Service-Restart\",\"panelIndex\":4,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"ecs-service\",\"restartHost\",\"message\"],\"id\":\"ecs-service-restart\",\"panelIndex\":5,\"row\":4,\"size_x\":12,\"size_y\":8,\"sort\":[\"@timestamp\",\"desc\"],\"type\":\"search\"}]",
+      "panelsJSON": "[{\"col\":8,\"id\":\"Service-Restart-Over-Time\",\"panelIndex\":2,\"row\":1,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":3,\"id\":\"Service-Restart\",\"panelIndex\":4,\"row\":1,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"ecs-service\",\"restartHost\",\"message\"],\"id\":\"ecs-service-restart\",\"panelIndex\":5,\"row\":4,\"size_x\":12,\"size_y\":8,\"sort\":[\"@timestamp\",\"desc\"],\"type\":\"search\"},{\"col\":1,\"id\":\"Troubleshoot-Navigation\",\"panelIndex\":6,\"row\":1,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"}]",
       "optionsJSON": "{\"darkTheme\":false}",
       "uiStateJSON": "{\"P-2\":{\"vis\":{\"legendOpen\":false}}}",
       "version": 1,
