@@ -16,7 +16,7 @@ kibana_url: "KIBANA_URL"
 alert_subject: "Frequent service restart"
 
 alert_text: |
-  Multiple service restarts have been detected. See {0}/app/kibana#/dashboard/Service-Restart-Dashboard"
+  Multiple service restarts have been detected. See {0}/app/kibana#/dashboard/Service-Restart-Dashboard
 alert_text_args:
   - kibana_url
 
