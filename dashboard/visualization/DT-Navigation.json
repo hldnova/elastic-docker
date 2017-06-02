@@ -1,0 +1,10 @@
+  {
+      "title": "DT Navigation",
+      "visState": "{\"title\":\"DT Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [DT Info](#/dashboard/ECS-DT-Dashboard)\\n\\n- [DT Down Logs](#/dashboard/DT-Down-Logs)\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+  }

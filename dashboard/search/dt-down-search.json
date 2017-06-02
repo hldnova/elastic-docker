@@ -1,0 +1,23 @@
+  {
+      "title": "dt-down-search",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "ecs-vdc-name",
+        "dt-owner-ip",
+        "dt-level",
+        "dt-type",
+        "dt-type-level",
+        "dt-status",
+        "dt-partition",
+        "dt-error"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ecsbeat-*\",\"query\":{\"query_string\":{\"query\":\"ecs-event-type:dtinfo AND dt-down:1\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+  }
