@@ -1,0 +1,10 @@
+  {
+      "title": "Network Outgoing Speed (mb/s)",
+      "visState": "{\"title\":\"Network Outgoing Speed (mb/s)\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index='metricbeat-*', metric='avg:system.network.out.bytes', split='host:5', q=' system.network.name:public').divide(1048576).divide(60).derivative().label(\\\"Outgoing Speed - $1\\\", \\\"^.* > host:(\\\\S+) > .*\\\")\",\"interval\":\"1m\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+  }

@@ -1,0 +1,10 @@
+  {
+      "title": "Network Incoming Speed (mb/s)",
+      "visState": "{\"title\":\"Network Incoming Speed (mb/s)\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index='metricbeat-*', metric='avg:system.network.in.bytes', split='host:5', q=' system.network.name:public').divide(1048576).divide(60).derivative().label(\\\"Incoming Speed - $1\\\", \\\"^.* > host:(\\\\S+) > .*\\\")\",\"interval\":\"1m\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+  }

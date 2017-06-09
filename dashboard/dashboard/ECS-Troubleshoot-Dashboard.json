@@ -2,7 +2,7 @@
       "title": "Troubleshoot - 500 Response",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":3,\"id\":\"ECS-500-Response-vs-ERROR\",\"panelIndex\":1,\"row\":1,\"size_x\":7,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"log_level\",\"verb\",\"application_host\",\"server_host\",\"message\"],\"id\":\"ECS-500-vs-ERROR\",\"panelIndex\":3,\"row\":4,\"size_x\":12,\"size_y\":8,\"sort\":[\"@timestamp\",\"asc\"],\"type\":\"search\"},{\"col\":10,\"id\":\"ECS-Total-Hits-log_level:ERROR-OR-status:500\",\"panelIndex\":4,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Troubleshoot-Navigation\",\"panelIndex\":5,\"row\":1,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"}]",
+      "panelsJSON": "[{\"col\":3,\"id\":\"ECS-500-Response-vs-ERROR\",\"panelIndex\":1,\"row\":1,\"size_x\":7,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"ECS-Total-Hits-log_level:ERROR-OR-status:500\",\"panelIndex\":4,\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Troubleshoot-Navigation\",\"panelIndex\":5,\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"id\":\"ECS-500-vs-ERROR\",\"type\":\"search\",\"panelIndex\":6,\"size_x\":11,\"size_y\":7,\"col\":1,\"row\":3,\"columns\":[\"log_level\",\"verb\",\"client_host\",\"server_host\",\"message\"],\"sort\":[\"@timestamp\",\"desc\"]}]",
       "optionsJSON": "{\"darkTheme\":false}",
       "uiStateJSON": "{}",
       "version": 1,

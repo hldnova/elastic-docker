@@ -1,5 +1,4 @@
   {
-    "_source": {
       "title": "Service Total Restart",
       "visState": "{\"title\":\"Total Restart\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
       "uiStateJSON": "{}",

@@ -1,0 +1,18 @@
+  {
+      "title": "elastalert-logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "rule_name",
+        "match_body.message",
+        "match_body.dt-error"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"elastalert_status\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"elastalert_status\",\"key\":\"alert_sent\",\"value\":\"true\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"alert_sent\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+  }

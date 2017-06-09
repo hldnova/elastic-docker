@@ -1,0 +1,13 @@
+  {
+      "title": "Elastalert Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"Troubleshoot-Navigation\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":2,\"size_y\":2,\"col\":1,\"row\":1},{\"id\":\"Elastalert-Over-Time\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":5,\"size_y\":2,\"col\":7,\"row\":1},{\"id\":\"Elastalert-Type-Distribution\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":3,\"size_y\":2,\"col\":3,\"row\":1},{\"id\":\"elastalert-logs\",\"type\":\"search\",\"panelIndex\":4,\"size_x\":11,\"size_y\":7,\"col\":1,\"row\":3,\"columns\":[\"rule_name\",\"match_body.message\",\"match_body.dt-error\"],\"sort\":[\"@timestamp\",\"desc\"]}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-2\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+  }

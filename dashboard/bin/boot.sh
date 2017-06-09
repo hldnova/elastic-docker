@@ -56,6 +56,8 @@ _create_ecsbeat_kibana_index
 
 _create_navigation_kibana_index
 
+_create_elastalert_kibana_index
+
 log "Load dashboards"
 
 _import_kibana_visualization
