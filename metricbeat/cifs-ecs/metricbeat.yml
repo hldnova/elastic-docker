@@ -111,7 +111,7 @@ setup.template.settings:
 #----------------------------- Logstash output --------------------------------
 output.logstash:
   # The Logstash hosts
-  hosts: ["10.1.83.30:5044","10.1.83.79:5044","10.1.83.80:5044" ]
+  hosts: ["10.1.1.1:5044" ]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications
