@@ -9,7 +9,7 @@
 set -u
 export PATH=/bin:/bin:/sbin:/usr/bin:/usr/sbin
 
-SHARED_LOGS_VOLUME='/var/log'
+SHARED_LOGS_VOLUME='/tmp'
 LOG_FILE=${SHARED_LOGS_VOLUME}/boot.log
 INSTALL_BASE='/opt/emc/nautilus/controller'
 DASHBOARD_BASE=${BOOT_LOCATION}/../
