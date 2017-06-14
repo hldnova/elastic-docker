@@ -44,8 +44,24 @@ metricbeat.modules:
   perfmon.counters:
     - alias: "processor.time.total.pct"
       query: '\Processor Information(_Total)\% Processor Time'
-    - alias: "diskio.write.bytes"
+      format: "long"
+    - alias: "diskio.bytes_per_sec"
+      query: '\PhysicalDisk(_Total)\Disk Bytes/sec'
+      format: "long"
+    - alias: "diskio.read.bytes_per_sec"
+      query: '\PhysicalDisk(_Total)\Disk Read Bytes/sec'
+      format: "long"
+    - alias: "diskio.reads_per_sec"
+      query: '\PhysicalDisk(_Total)\Disk Reads/sec'
+      format: "long"      
+    - alias: "diskio.transfers_per_sec"
+      query: '\PhysicalDisk(_Total)\Disk Transfers/sec'
+      format: "long"      
+    - alias: "diskio.writes_per_sec"
       query: '\PhysicalDisk(_Total)\Disk Writes/sec'
+      format: "long"      
+    - alias: "diskio.write.bytes_per_sec"
+      query: '\PhysicalDisk(_Total)\Disk Write Bytes/sec'
       format: "long"
     - alias: "cifs-ecs.client.received.bytes_per_sec"
       query: '\CIFS-ECS Client\Bytes Received (bytes/sec)'
