@@ -1,0 +1,11 @@
+  {
+      "title": "Workload Summary by Node - PUT",
+      "visState": "{\"title\":\"Workload Summary by Node - PUT\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ecs-node-ip\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Node\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ecs-vdc-name\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"VDC\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"upload\",\"customLabel\":\"Upload\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"percentiles\",\"schema\":\"metric\",\"params\":{\"field\":\"duration\",\"percents\":[50,75,95],\"customLabel\":\"Response Time\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"percentile_ranks\",\"schema\":\"metric\",\"params\":{\"field\":\"resp_time_ms\",\"values\":[1000],\"customLabel\":\"Response Time\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"duration\",\"customLabel\":\"Max Response Time\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "type-accesslog",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"filebeat-*\",\"key\":\"method\",\"value\":\"PUT\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"method\":{\"query\":\"PUT\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+  }
