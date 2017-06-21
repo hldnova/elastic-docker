@@ -36,6 +36,18 @@ services:
     networks:
       - docker_elk
 
+  curator:
+    image: emccorp/docker-escurator:5.0.4
+    environment:
+       ELASTICSEARCH_HOST: elasticsearch
+       RETENTION_DAYS: 40
+    volumes:
+      - ./curator/config/:/curator/config/
+      - ./curator/logs/:/curator/logs/
+    networks:
+      - docker_elk
+
+
   #elastalert:
   #  image: emccorp/docker-elastalert:0.1.12
   #  #build: elastalert/
