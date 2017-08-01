@@ -1,6 +1,6 @@
   {
       "title": "Troubleshoot Navigation",
-      "visState": "{\"title\":\"Troubleshoot Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [500 Response](#/dashboard/ECS-Troubleshoot-Dashboard)\\n\\n- [Error Response](#/dashboard/ECS-Client-Error-Distribution)\\n\\n- [Service Restart](#/dashboard/Service-Restart-Dashboard)\\n- [Elastalert](#/dashboard/Elastalert-Dashboard)\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Troubleshoot Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [500 Response](#/dashboard/ECS-Troubleshoot-Dashboard)\\n\\n- [Error Response](#/dashboard/ECS-Client-Error-Distribution)\\n\\n- [Service Restart](#/dashboard/Service-Restart-Dashboard)\\n\\n- [GC](#/dashboard/GC-Dashboard)\\n\\n- [Elastalert](#/dashboard/Elastalert-Dashboard)\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
