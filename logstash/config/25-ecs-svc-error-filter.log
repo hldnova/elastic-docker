@@ -1,7 +1,13 @@
 filter {
-  if [type] == "javalog" {
+  if [type] == "svcerrorlog" {
     grok {
       match => { "message" => "^%{TIMESTAMP_ISO8601:timestamp}%{SPACE}(?<thread_name>\[(.*?)\])%{SPACE}%{LOGLEVEL:log_level}%{SPACE}%{JAVAFILE:file_name}%{SPACE}\(%{WORD}%{SPACE}%{NUMBER}\)%{SPACE}%{GREEDYDATA:log_message}" }
+    }
+
+    grok {
+      # filename format: {svcname}-error.log
+      # "source" => "dataheadsvc-error.log",
+      match => { "source" => "%{GREEDYDATA}/%{GREEDYDATA:svcname}-error.log"}
     }
 
     date {
