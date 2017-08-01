@@ -92,6 +92,7 @@
         \"IS_HEAD\":{\"id\":\"number\"},
         \"IS_DELETE\":{\"id\":\"number\"},
         \"IS_POST\":{\"id\":\"number\"},
+        \"IS_OPTIONS\":{\"id\":\"number\"},
         \"bytes_egress\":{\"id\":\"bytes\"},
         \"bytes_ingress\":{\"id\":\"bytes\"},
         \"upload\":{\"id\":\"bytes\"},
