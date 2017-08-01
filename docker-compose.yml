@@ -10,7 +10,7 @@ services:
     volumes:
       - /data/volume0/elasticsearch/:/usr/share/elasticsearch/data/
     environment:
-      ES_JAVA_OPTS: "-Xms1g -Xmx1g "
+      ES_JAVA_OPTS: "-Xms4g -Xmx4g "
     networks:
       - docker_elk
 
@@ -22,6 +22,7 @@ services:
       - 5044:5044
     volumes:
       - ./logstash/config:/etc/logstash/conf.d
+      - ./logstash/patterns:/etc/logstash/patterns
       - ./logstash/logs/:/var/log/logstash/
     networks:
       - docker_elk
