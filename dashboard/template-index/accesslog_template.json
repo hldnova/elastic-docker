@@ -135,6 +135,14 @@
                 }
             }
         },
+        "svcgclog": {
+            "properties": {
+                "svcname": {
+                    "type": "string",
+                    "index" : "not_analyzed"
+                }
+            }
+        },
         "restart": {
             "properties": {
                 "ecs-service": {
