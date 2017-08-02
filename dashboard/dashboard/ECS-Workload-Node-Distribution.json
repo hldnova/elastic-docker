@@ -2,9 +2,9 @@
       "title": "Workload by Node",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":8,\"id\":\"ECS-Request-By-Node-Over-Time\",\"panelIndex\":1,\"row\":4,\"size_x\":5,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ECS-Request-Distribution-by-Node\",\"panelIndex\":2,\"row\":4,\"size_x\":7,\"size_y\":4,\"type\":\"visualization\"},{\"col\":8,\"id\":\"ECS-Request-By-Method-and-Node\",\"panelIndex\":3,\"row\":1,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Node-Navigation\",\"panelIndex\":4,\"row\":1,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"},{\"id\":\"ECS-Request-By-Node-Chart\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":5,\"size_y\":3,\"col\":3,\"row\":1}]",
+      "panelsJSON": "[{\"col\":7,\"id\":\"ECS-Request-By-Node-Over-Time\",\"panelIndex\":1,\"row\":3,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ECS-Request-Distribution-by-Node\",\"panelIndex\":2,\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"ECS-Request-By-Method-and-Node\",\"panelIndex\":3,\"row\":1,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Node-Navigation\",\"panelIndex\":4,\"row\":1,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"},{\"col\":3,\"id\":\"ECS-Request-By-Node-Chart\",\"panelIndex\":6,\"row\":1,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"id\":\"SS-Resource-Consumption-Over-Limits\",\"type\":\"visualization\",\"panelIndex\":7,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":5}]",
       "optionsJSON": "{\"darkTheme\":false}",
-      "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"desc\"}}}},\"P-1\":{\"vis\":{\"legendOpen\":true}}}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"legendOpen\":true}},\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"desc\"}}}}}",
       "version": 1,
       "timeRestore": false,
       "kibanaSavedObjectMeta": {
