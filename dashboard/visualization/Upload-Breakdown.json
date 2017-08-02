@@ -1,0 +1,10 @@
+  {
+      "title": "Upload Breakdown",
+      "visState": "{\"title\":\"Upload Breakdown\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"range\",\"schema\":\"bucket\",\"params\":{\"field\":\"upload\",\"ranges\":[{\"from\":0,\"to\":1048576},{\"from\":1048576,\"to\":4194304},{\"from\":4194304,\"to\":16777216},{\"from\":16777216,\"to\":67108846},{\"from\":67108846,\"to\":134217692},{\"from\":134217692}],\"customLabel\":\"Upload Ranges\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"upload\",\"customLabel\":\"Upload\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"duration\",\"customLabel\":\"Avg Response Time (ms)\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"index\":\"filebeat-*\",\"query\":{\"query_string\":{\"query\":\"type:accesslog AND method:PUT\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+  }
