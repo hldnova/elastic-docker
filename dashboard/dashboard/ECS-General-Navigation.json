@@ -6,7 +6,14 @@
       "optionsJSON": "{\"darkTheme\":false}",
       "uiStateJSON": "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-10\":{\"vis\":{\"legendOpen\":false}},\"P-17\":{\"vis\":{\"legendOpen\":false}},\"P-6\":{\"vis\":{\"legendOpen\":false}}}",
       "version": 1,
-      "timeRestore": false,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1d",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }
