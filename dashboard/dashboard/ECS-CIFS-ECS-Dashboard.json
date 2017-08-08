@@ -2,7 +2,7 @@
       "title": "CIFS-ECS Dashboard",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":1,\"id\":\"CIFS-ECS-Disk-Activity-Over-Time\",\"panelIndex\":1,\"row\":1,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":6,\"id\":\"CIFS-ECS-Queue-Length-Over-Time\",\"panelIndex\":2,\"row\":4,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":6,\"id\":\"CIFS-ECS-Queue-Rate-Over-Time\",\"panelIndex\":3,\"row\":1,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Object-Insight-App-Behavior-Access-Method-Over-Time\",\"panelIndex\":4,\"row\":4,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"id\":\"Average-Response-Time\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":5,\"size_y\":2,\"col\":1,\"row\":7},{\"id\":\"ECS-Object-Operations-Overtime\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":5,\"size_y\":2,\"col\":6,\"row\":7}]",
+      "panelsJSON": "[{\"col\":1,\"id\":\"CIFS-ECS-Disk-Activity-Over-Time\",\"panelIndex\":1,\"row\":1,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":6,\"id\":\"CIFS-ECS-Queue-Length-Over-Time\",\"panelIndex\":2,\"row\":4,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":6,\"id\":\"CIFS-ECS-Queue-Rate-Over-Time\",\"panelIndex\":3,\"row\":1,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Object-Insight-App-Behavior-Access-Method-Over-Time\",\"panelIndex\":4,\"row\":4,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Response-Time\",\"panelIndex\":5,\"row\":7,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"id\":\"CIFS-ECS-Open-Files\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":5,\"size_y\":3,\"col\":6,\"row\":7}]",
       "optionsJSON": "{\"darkTheme\":false}",
       "uiStateJSON": "{}",
       "version": 1,
@@ -11,4 +11,3 @@
         "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }
   }
-
