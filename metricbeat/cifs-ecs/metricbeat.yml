@@ -87,6 +87,29 @@ metricbeat.modules:
     - alias: "cifs-ecs.client.restore.queue.rate.ops_per_sec"
       query: '\CIFS-ECS Client\Restore Queue Rate (ops/sec)'
       format: "long"
+    - alias: "cifs-ecs.client.open.directories"
+      query: '\CIFS-ECS Client\Open Directories'
+      format: "long"
+    - alias: "cifs-ecs.client.open_files"
+      query: '\CIFS-ECS Client\Open Files'
+      format: "long"
+    - alias: "cifs-ecs.client.open.files.offline"
+      query: '\CIFS-ECS Client\Open Files (offline)'
+      format: "long"
+    - alias: "cifs-ecs.client.open.files.private_to_cifs_ecs"
+      query: '\CIFS-ECS Client\Open Files (Private to CIFS-ECS)'
+      format: "long"
+
+#    - alias: "cifs-ecs.folder.changelog.queue.input.rate.ops_per_sec"
+#      query: '\CIFS-ECS Folder(E:\)\Change Log Queue Input Rate (ops/sec)'
+#      format: "long"
+#    - alias: "cifs-ecs.folder.changelog.queue.output.rate.ops_per_sec"
+#      query: '\CIFS-ECS Folder(E:\)\Change Log Queue Output Rate (ops/sec)'
+#      format: "long"
+#    - alias: "cifs-ecs.folder.changelog.queue.length"
+#      query: '\CIFS-ECS Folder(E:\)\Change Log Queue Length'
+#      format: "long"
+
 
 #==================== Elasticsearch template setting ==========================
 setup.template.settings:
