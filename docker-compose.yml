@@ -3,6 +3,7 @@ version: '2'
 services:
   elasticsearch:
     image: elasticsearch:5.1.2
+    restart: always
     #build: elasticsearch/
     ports:
       - 9200:9200
@@ -16,6 +17,7 @@ services:
 
   logstash:
     image: logstash:5.1.2
+    restart: always
     #build: logstash/
     command: -f /etc/logstash/conf.d/
     ports:
@@ -31,6 +33,7 @@ services:
 
   kibana:
     image: kibana:5.1.2
+    restart: always
     #build: kibana/
     volumes:
       - ./kibana/config/kibana.yml:/etc/kibana/kibana.yml
@@ -41,6 +44,7 @@ services:
 
   curator:
     image: emccorp/docker-escurator:5.0.4
+    restart: always
     environment:
        ELASTICSEARCH_HOST: elasticsearch
        RETENTION_DAYS: 40
@@ -51,22 +55,23 @@ services:
       - docker_elk
 
 
-  #elastalert:
-  #  image: emccorp/docker-elastalert:0.1.12
-  #  #build: elastalert/
-  #  environment:
-  #     KIBANA_URL: "${KIBANA_URL}"
-  #     EMAIL_ADDRESS: "${EMAIL_ADDRESS}"
-  #     SLACK_WEBHOOK_URL: "${SLACK_WEBHOOK_URL}"
-  #     SNMP_TRAP_DESTINATION: "${SNMP_TRAP_DESTINATION}"
-  #     SNMP_COMMUNITY: "${SNMP_COMMUNITY}"
-  #  # export HOSTNAME from your shell for this to take effect
-  #  hostname: "${HOSTNAME}"
-  #  volumes:
-  #    - ./elastalert/config/:/opt/elastalert/config/
-  #    - ./elastalert/rules/:/opt/elastalert/rules/
-  #  networks:
-  #    - docker_elk
+  elastalert:
+    image: emccorp/docker-elastalert:0.1.12
+    restart: always
+    #build: elastalert/
+    environment:
+       KIBANA_URL: "${KIBANA_URL}"
+       EMAIL_ADDRESS: "${EMAIL_ADDRESS}"
+       SLACK_WEBHOOK_URL: "${SLACK_WEBHOOK_URL}"
+       SNMP_TRAP_DESTINATION: "${SNMP_TRAP_DESTINATION}"
+       SNMP_COMMUNITY: "${SNMP_COMMUNITY}"
+    # export HOSTNAME from your shell for this to take effect
+    hostname: "${HOSTNAME}"
+    volumes:
+      - ./elastalert/config/:/opt/elastalert/config/
+      - ./elastalert/rules/:/opt/elastalert/rules/
+    networks:
+      - docker_elk
 
   #filebeat:
   #  # uncomment the line below to disable this container
