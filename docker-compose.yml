@@ -47,13 +47,23 @@ services:
     restart: always
     environment:
        ELASTICSEARCH_HOST: elasticsearch
-       RETENTION_DAYS: 40
+       RETENTION_DAYS: 14
     volumes:
       - ./curator/config/:/curator/config/
       - ./curator/logs/:/curator/logs/
     networks:
       - docker_elk
 
+  nginx:
+    image: nginx
+    restart: always
+    ports:
+      - 80:80
+      - 9201:9200
+    volumes:
+      - ./nginx/config/:/etc/nginx/conf.d
+    networks:
+      - docker_elk
 
   elastalert:
     image: emccorp/docker-elastalert:0.1.12
