@@ -27,7 +27,7 @@ actions:
       direction: older
       timestring: '%Y.%m.%d'
       unit: days
-      unit_count: 40
+      unit_count: 14
       exclude:
 
   2:
@@ -51,7 +51,7 @@ actions:
       direction: older
       timestring: '%Y.%m.%d'
       unit: days
-      unit_count: 40
+      unit_count: 14
       exclude:
 
   3:
@@ -75,5 +75,5 @@ actions:
       direction: older
       timestring: '%Y.%m.%d'
       unit: days
-      unit_count: 40
+      unit_count: 14
       exclude:
