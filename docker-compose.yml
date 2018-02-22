@@ -20,6 +20,8 @@ services:
     command: -f /etc/logstash/conf.d/
     ports:
       - 5044:5044
+      - 5014:5014
+      - 5015:5015
     volumes:
       - ./logstash/config:/etc/logstash/conf.d
       - ./logstash/patterns:/etc/logstash/patterns
@@ -49,22 +51,22 @@ services:
       - docker_elk
 
 
-  elastalert:
-    image: emccorp/docker-elastalert:0.1.12
-    #build: elastalert/
-    environment:
-       KIBANA_URL: "${KIBANA_URL}"
-       EMAIL_ADDRESS: "${EMAIL_ADDRESS}"
-       SLACK_WEBHOOK_URL: "${SLACK_WEBHOOK_URL}"
-       SNMP_TRAP_DESTINATION: "${SNMP_TRAP_DESTINATION}"
-       SNMP_COMMUNITY: "${SNMP_COMMUNITY}"
-    # export HOSTNAME from your shell for this to take effect
-    hostname: "${HOSTNAME}"
-    volumes:
-      - ./elastalert/config/:/opt/elastalert/config/
-      - ./elastalert/rules/:/opt/elastalert/rules/
-    networks:
-      - docker_elk
+  #elastalert:
+  #  image: emccorp/docker-elastalert:0.1.12
+  #  #build: elastalert/
+  #  environment:
+  #     KIBANA_URL: "${KIBANA_URL}"
+  #     EMAIL_ADDRESS: "${EMAIL_ADDRESS}"
+  #     SLACK_WEBHOOK_URL: "${SLACK_WEBHOOK_URL}"
+  #     SNMP_TRAP_DESTINATION: "${SNMP_TRAP_DESTINATION}"
+  #     SNMP_COMMUNITY: "${SNMP_COMMUNITY}"
+  #  # export HOSTNAME from your shell for this to take effect
+  #  hostname: "${HOSTNAME}"
+  #  volumes:
+  #    - ./elastalert/config/:/opt/elastalert/config/
+  #    - ./elastalert/rules/:/opt/elastalert/rules/
+  #  networks:
+  #    - docker_elk
 
   #filebeat:
   #  # uncomment the line below to disable this container
