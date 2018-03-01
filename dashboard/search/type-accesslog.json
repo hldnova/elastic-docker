@@ -8,8 +8,7 @@
         "download",
         "resp_time_ms",
         "method",
-        "ecs-node-ip",
-        "request"
+        "ecs-node-ip"
       ],
       "sort": [
         "@timestamp",

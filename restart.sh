@@ -15,3 +15,5 @@ do
     fi
 done
 
+cd dashboard/bin
+./boot.sh

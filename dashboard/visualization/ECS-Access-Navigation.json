@@ -1,6 +1,6 @@
   {
       "title": "Access Navigation",
-      "visState": "{\"title\":\"ECS Access Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [Access Summary](#/dashboard/ECS-Access-Dashboard)\\n\\n- [Access Statistics](#/dashboard/Access-Statistics)\\n\\n- [Access Breakdown](#/dashboard/Access-Breakdown)\\n\\n- [Usage by Client](#/dashboard/ECS-Usage-By-Client-Host)\\n\\n- [Usage by Namespace](#/dashboard/ECS-Usage-By-Namespace)\\n\\n- [Logs](#/dashboard/Access-Log-Dashboard)\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"ECS Access Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [Access Summary](#/dashboard/ECS-Access-Dashboard)\\n\\n- [Access Statistics](#/dashboard/Access-Statistics)\\n\\n- [Access Breakdown](#/dashboard/Access-Breakdown)\\n\\n- [Usage by Client](#/dashboard/ECS-Usage-By-Client-Host)\\n\\n- [Logs](#/dashboard/Access-Log-Dashboard)\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
