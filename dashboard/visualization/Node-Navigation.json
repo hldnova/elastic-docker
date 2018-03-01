@@ -1,6 +1,6 @@
   {
       "title": "Node Resources",
-      "visState": "{\"title\":\"Node Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [System Resources](#/dashboard/ECS-Resources-Dashboard)\\n\\n- [Disk Capacity](#/dashboard/Node-Disk-Capacity-Dashboard)\\n\\n- [Workload by Node](#/dashboard/ECS-Workload-Node-Distribution)\"},\"aggs\":[],\"listeners\":{}}",
+      "visState": "{\"title\":\"Node Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"- [Node Resources](#/dashboard/ECS-Resources-Dashboard)\\n\\n- [Disk Capacity](#/dashboard/Node-Disk-Capacity-Dashboard)\\n\\n- [Workload by Node](#/dashboard/ECS-Workload-Node-Distribution)\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,

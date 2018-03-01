@@ -1,0 +1,10 @@
+  {
+      "title": "ECS Node Resources Usage",
+      "visState": "{\"title\":\"System Resources Usage\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"nodeCpuUtilizationCurrent_Percent\",\"customLabel\":\"CPU (%)\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ecs-node-ip\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Node\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"nodeMemoryUtilizationCurrent_Percent\",\"customLabel\":\"Memory (%)\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"nodeNicReceivedUtilizationCurrent_Percent\",\"customLabel\":\"NIC RX (%)\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"nodeNicUtilizationCurrent_Percent\",\"customLabel\":\"Nic TX (%)\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ecsbeat-*\",\"query\":{\"query_string\":{\"query\":\"ecs-event-type:nodes\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+  }
