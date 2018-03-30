@@ -1,0 +1,10 @@
+  {
+      "title": "Activity by Client Host",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"4\",\"params\":{\"customLabel\":\"Client IP\",\"field\":\"client_host\",\"order\":\"desc\",\"orderBy\":\"8\",\"size\":5},\"schema\":\"bucket\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"8\",\"params\":{\"customLabel\":\"\"},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Download\",\"field\":\"bytes_egress\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"id\":\"5\",\"params\":{\"customLabel\":\"Upload\",\"field\":\"bytes_ingress\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"id\":\"6\",\"params\":{\"customLabel\":\"Response Time (ms)\",\"field\":\"resp_time_ms\"},\"schema\":\"metric\",\"type\":\"avg\"}],\"listeners\":{},\"params\":{\"perPage\":5,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"title\":\"Activity by Client Host test\",\"type\":\"table\"}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"filebeat-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+  }

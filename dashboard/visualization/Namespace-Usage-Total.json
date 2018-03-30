@@ -1,0 +1,10 @@
+  {
+      "title": "Namespace Usage Total",
+      "visState": "{\"title\":\"Namespace Usage Total\",\"type\":\"table\",\"params\":{\"perPage\":5,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"namespace\",\"size\":2000,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Namespace\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"total_size\",\"customLabel\":\"Total Size (GB)\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"total_objects\",\"customLabel\":\"Total Objects\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"@timestamp\",\"size\":1,\"order\":\"asc\",\"orderBy\":\"2\",\"customLabel\":\"Last Polled At\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":2,\"direction\":\"desc\"}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ecsbeat-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"ecs-event-type:nsbillingsample\"}},\"filter\":[]}"
+      }
+  }
