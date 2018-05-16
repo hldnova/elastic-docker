@@ -16,7 +16,13 @@ $ cd elastic-docker
 $ docker-compose up -d
 ```
 
-Access Kibana UI [http://<docker_box>:5601](http://<docker_box>:5601) with a web browser. Note that you will need to select an index pattern first, e.g., **metricbeat-***. Then click **Dashboard** and open an sample dashboard by clicking **Open** button on the top right area.
+To load sample dashboard:
+```bash
+$ cd dashboard/bin
+$ ./boot.sh
+```
+
+To view dashboard, pointer your browser to  http://<your_elk_host>:5601 
 
 # Configurations
 Configurations are in their respective directories. Adjust *docker-compose.yml" and other configurations files as needed.
